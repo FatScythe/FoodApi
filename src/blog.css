@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*, *::before, *::after {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing : border-box;
+}
+
+article {
+    display: none;
+}
+
+.chevron {
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.chevron-up {
+    transform: rotate(180deg);
+}
+
+.chevron-down {
+    transform: rotate(180deg);
+}
+
+.active, .chevron:hover {
+    background-color: #ccc;
+}
+
+li p span {
+    margin-left: 5px;
+}
+
+form {
+    width: 85%;
+    margin: 0 auto;
+}
+
+form input, textarea {
+    width: 100%;
+}
+
+@media screen and (max-width : 450px) {
+    .title {
+        font-size: 0.8rem;
+    }
+}

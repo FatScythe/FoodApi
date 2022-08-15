@@ -17,4 +17,16 @@
     @apply rounded-full py-2 px-3 uppercase text-xs font-bold cursor-pointer tracking-wider hover:bg-primary hover:text-white transition ease-out duration-500;
 }
 
+.login-wrapper, .login {
+    height: 70vh;
+}
+
+.login-wrapper .img {
+    height: 100vh;
+}
+
+.container {
+    @apply w-full mr-auto ml-auto;
+}
+
 /* npx tailwindcss -i ./src/input.css -o ./public/output.css --watch */

@@ -3,6 +3,7 @@ const burgerWrapper = document.querySelector('.burger-wrapper');
 const menu = document.querySelector('#menu');
 const close = document.querySelector('#close');
 const search = document.querySelector('.search input');
+const form = document.querySelector('form');
 const searchBtn = document.querySelector('.search-btn');
 const result = document.querySelector('.result');
 const id = 'd2b9f3aa';
@@ -47,9 +48,9 @@ const addRecipes = (data) => {
     result.innerHTML += html;
 }
 
-searchBtn.addEventListener('click', (e) =>{
-    e.preventDefault;
-    searchQuery = search.value.trim().toLowerCase();
+form.addEventListener('submit', (e) =>{
+    e.preventDefault();
+    searchQuery = search.value.toLowerCase();
     
     if(searchQuery) {
         fetchRecipe(searchQuery)
