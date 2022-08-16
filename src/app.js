@@ -29,9 +29,7 @@ close.addEventListener('click', () => {
 
 const addRecipes = (data) => {
     let html = '';
-    // console.log(data)
     data.map((datum) => {
-        // console.log(datum)
         html += `
         <div class="card h-48" title = ${datum.recipe.label}>
             <img src=${datum.recipe.image} alt=${datum.recipe.label}  class="w-full h-32 sm:h-48 object-cover">
@@ -51,8 +49,7 @@ const addRecipes = (data) => {
         `
     });
 
-    result.innerHTML = html;
-    
+    result.innerHTML = html;   
 }
 
 form.addEventListener('submit', (e) =>{
@@ -69,10 +66,6 @@ const fetchRecipe = async (searchQuery) => {
     const response = await fetch(base);
     const data = await response.json();
     const recipes = data.hits;
-    // recipes.map(recipe => {
-    //         addRecipes(recipe);
-    // });
-
     addRecipes(recipes);
     
     return recipes;
