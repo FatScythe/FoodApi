@@ -116,7 +116,7 @@ db.collection("recipes").get().then((querySnapshot) => {
 
         for(let i = 0; i < lists.length; i++){
 
-            chevron[i].addEventListener('click', () => {
+            panels[i].addEventListener('click', () => {
                 chevron[i].classList.toggle('chevron-up');
                 chevron[i].classList.toggle('chevron-down');
 
