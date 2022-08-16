@@ -1,5 +1,4 @@
 const content = document.querySelector('article');
-const panels = document.querySelectorAll('.panel');
 const addBlogBtn = document.querySelector('.add');
 const addBlogForm = document.querySelector('form');
 const blogList = document.querySelector('.blog-list');
@@ -109,9 +108,11 @@ db.collection("recipes").get().then((querySnapshot) => {
 
     // Quering the elements for each blog Item
 
+        
         let lists = Array.from(blogList.children);
         let chevron = document.querySelectorAll('.chevron');
         let article = document.querySelectorAll('.article');
+        let panels = document.querySelectorAll('.panel');
 
 
         for(let i = 0; i < lists.length; i++){
