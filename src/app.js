@@ -62,7 +62,7 @@ form.addEventListener('submit', (e) =>{
 });
 
 const fetchRecipe = async (searchQuery) => {
-    const base = `http://api.edamam.com/search?q=${searchQuery}&app_id=${id}&app_key=${key}&to=10`
+    const base = `https://api.edamam.com/search?q=${searchQuery}&app_id=${id}&app_key=${key}&to=10`
     const response = await fetch(base);
     const data = await response.json();
     const recipes = data.hits;
